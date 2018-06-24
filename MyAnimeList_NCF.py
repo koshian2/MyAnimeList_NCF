@@ -75,10 +75,10 @@ mycallback = MyCallback()
 history = model.fit_generator(generator=fit_generator(), 
                     steps_per_epoch=n_user, epochs=n_epochs, callbacks=[mycallback]).history
 
-model.save("ncf_model.h5")
+model.save("data/ncf_model.h5")
 
 # ヒストリの記録
-with open("history.dat", "wb") as fp:
+with open("data/history.dat", "wb") as fp:
     pickle.dump(history, fp)
 
 
